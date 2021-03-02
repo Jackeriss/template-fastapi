@@ -1,4 +1,4 @@
-from typing import Any, List
+from typing import String
 
 from fastapi import APIRouter
 
@@ -6,5 +6,5 @@ router = APIRouter()
 
 
 @router.get("/")
-async def ping() -> Any:
+async def ping() -> String:
     return "pong"
