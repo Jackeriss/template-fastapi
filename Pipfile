@@ -4,7 +4,8 @@ url = "https://mirrors.aliyun.com/pypi/simple"
 verify_ssl = true
 
 [scripts]
-serve = "uvicorn app.main:app --reload"
+dev = "uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+prod = "uvicorn app.main:app --host 0.0.0.0 --port 8000"
 
 [packages]
 "fastapi[all]" = "*"

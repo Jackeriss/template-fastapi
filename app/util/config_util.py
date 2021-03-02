@@ -7,7 +7,6 @@ from app.constant import constant
 
 
 ENV = os.environ.get("ENV", "dev")
-PORT = os.environ.get("PORT", 8000)
 
 
 def _read_config(env):
@@ -50,7 +49,6 @@ class Config:
 
     @property
     def server(self):
-        self._config["server"]["port"] = PORT
         return self._config["server"]
 
     @property

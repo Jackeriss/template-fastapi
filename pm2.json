@@ -2,7 +2,7 @@
     "apps": [{
         "name": "template-fastapi",
         "script": "/bin/bash",
-        "args": ["-c", "pipenv run serve"],
+        "args": ["-c", "pipenv run prod"],
         "exec_mode": "fork_mode",
         "instances": "1",
         "autorestart": false,
@@ -11,8 +11,7 @@
         "merge_logs": true,
         "increment_var": "PORT",
         "env": {
-            "ENV": "prod",
-            "PORT": 8000
+            "ENV": "prod"
         }
     }]
 }
