@@ -1,0 +1,12 @@
+---
+server:
+  debug: true
+  host: 0.0.0.0
+  allow_origin: "*"
+  thread_worker: 60
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  db: 0
+  password:
