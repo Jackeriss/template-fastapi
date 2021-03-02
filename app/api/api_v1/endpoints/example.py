@@ -8,7 +8,7 @@ router = APIRouter()
 
 
 @router.get("/")
-async def read_items() -> Any:
+async def get_example() -> Any:
     """
     An example for get the result of bilibili's movie api
     """
