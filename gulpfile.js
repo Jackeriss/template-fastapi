@@ -1,12 +1,8 @@
 const gulp = require('gulp');
-const cp = require("child_process")
-
-function install() {
-  return cp.exec('pipenv install --deploy')
-}
+const run = require('gulp-run')
 
 function start() {
-  return cp.exec('/usr/local/bin/pm2 startOrReload pm2.json')
+  return run('/usr/local/bin/pm2 startOrRestart pm2.json').exec()
 }
 
 exports.default = gulp.series(install, start)
